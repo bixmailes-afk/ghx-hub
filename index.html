@@ -1,34 +1,15 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="UTF-8">
-  <title>Games</title>
-</head>
-<body>
-
-<button onclick="openBlank()">Play Game</button>
-
 <script>
-function openBlank() {
-  const blank = window.open("", "_blank");
+function openGame() {
+  const tab = window.open("about:blank", "_blank");
 
-  blank.document.write(`
-    <!DOCTYPE html>
-    <html>
-    <head>
-      <title>Games</title>
-    </head>
-    <body>
-      <button onclick="window.location.href='https://kahoot.undo.it/'">
-        Play Game
-      </button>
-    </body>
-    </html>
+  tab.document.write(`
+    <button onclick="location.href='https://kahoot.undo.it/'">
+      Play Game
+    </button>
   `);
 
-  blank.document.close();
+  tab.document.close();
 }
 </script>
 
-</body>
-</html>
+<button onclick="openGame()">Play Game</button>
